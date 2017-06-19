@@ -71,7 +71,7 @@
               <div class="col-sm-4 py-4">
                 <div class="thumbnail">
                   <img src="http://placehold.it/200x180" alt="">
-                    <div class="caption">
+                    <div class="caption text-center">
                       <h5>Thumbnail label</h5>
                       <p><a href="#" class="btn btn-info btn-sm" role="button">Button</a></p>
                   </div>
@@ -81,7 +81,7 @@
               <div class="col-sm-4 py-4">
                 <div class="thumbnail">
                   <img src="http://placehold.it/200x180" alt="">
-                    <div class="caption">
+                    <div class="caption text-center">
                       <h5>Thumbnail label</h5>
                       <p><a href="#" class="btn btn-info btn-sm" role="button">Button</a></p>
                   </div>
@@ -97,7 +97,7 @@
               <div class="col-sm-4 py-4">
                 <div class="thumbnail">
                   <img src="http://placehold.it/200x180" alt="">
-                    <div class="caption">
+                    <div class="caption text-center">
                       <h5>Thumbnail label</h5>
                       <p><a href="#" class="btn btn-info btn-sm pull-right" role="button">Button</a></p>
                   </div>
@@ -107,7 +107,7 @@
               <div class="col-sm-4 py-4">
                 <div class="thumbnail">
                   <img src="http://placehold.it/200x180" alt="">
-                    <div class="caption">
+                    <div class="caption text-center">
                       <h5>Thumbnail label</h5>
                       <p><a href="#" class="btn btn-info btn-sm" role="button">Button</a></p>
                   </div>
@@ -117,7 +117,7 @@
               <div class="col-sm-4 py-4">
                 <div class="thumbnail">
                   <img src="http://placehold.it/200x180" alt="">
-                    <div class="caption">
+                    <div class="caption text-center">
                       <h5>Thumbnail label</h5>
                       <p><a href="#" class="btn btn-info btn-sm" role="button">Button</a></p>
                   </div>

@@ -7,8 +7,8 @@ body {
 }
 
 .jumbotron {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   margin-bottom: 0;
   background-color: #fff;
 }
@@ -27,8 +27,8 @@ body {
 
 .album {
   min-height: 50rem; /* Can be removed; just added for demo purposes */
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   background-color: #f7f7f7;
 }
 
@@ -38,11 +38,41 @@ body {
   padding: .75rem;
   margin-bottom: 2rem;
   border: 0;
+
+
+  display: inline-block;
+    overflow: hidden;
 }
 
 .card > img {
+  margin-top: .75rem;
   margin-bottom: .75rem;
+  border:1px solid #cacaca;
+  padding:10px;
+
+
+  -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    
+    vertical-align: middle;
 }
+
+
+.card:hover img {
+    -webkit-transform:scale(1.05); /* Safari and Chrome */
+    transform:scale(1.05);
+    -ms-transform:scale(1.05); /* IE 9 */
+    -moz-transform:scale(1.05); /* Firefox */
+    -webkit-transform:scale(1.05); /* Safari and Chrome */
+    -o-transform:scale(1.05); /* Opera */
+
+    cursor:pointer;
+}
+
+
 
 .card-text {
   font-size: 85%;

@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Album example for Bootstrap</title>
+    <title>ICCT Bazaar</title>
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
@@ -39,7 +39,7 @@
     </div>
     <div class="navbar navbar-inverse bg-inverse">
       <div class="container d-flex justify-content-between">
-        <a href="#" class="navbar-brand">Album</a>
+        <a href="#" class="navbar-brand">ICCT Bazaar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -142,11 +142,13 @@
                 </div>
                 
                 <div class="side-category-container">
-                  <h5>Category</h5>
-                  <ul class="list-unstyled">
-                    <li><a href="#" >Follow on Twitter</a></li>
-                    <li><a href="#">Like on Facebook</a></li>
-                    <li><a href="#" >Email me</a></li>
+                  <h5>Categories</h5>
+                  <ul class="list-unstyled" style="margin-left:5px">
+                    <li><a href="#" >Gadgets</a></li>
+                    <li><a href="#">School supplies</a></li>
+                    <li><a href="#">Clothes</a></li>
+                    <li><a href="#" >Bags</a></li>
+                    <li><a href="#" >Accessories</a></li>
                   </ul>
                 </div>
                 

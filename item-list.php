@@ -12,8 +12,19 @@
             
             <!--item row-->
             <div class="row">
+
+               <!--loop category-->
+          <?php foreach($items as $key=>$selling){ ?>
+          <div class="card text-center">
+           <?php echo $selling['name']; ?>
+            <img src="<?php echo $selling['image_url'] ?>" alt="<?php echo $selling['description']; ?>">
+            <p><a href="#" class="btn btn-info btn-sm" role="button">View Details</a></p>
+            
+          </div>
+          <?php } ?>
+          <!--end loop category-->
         
-              <div class="col-sm-4 py-4">
+              <!-- <div class="col-sm-4 py-4">
                 <div class="thumbnail">
                   <img src="http://placehold.it/200x180" alt="">
                     <div class="caption text-center">
@@ -47,7 +58,7 @@
             <!--end item row-->
 
             <!--item row-->
-            <div class="row">
+         <!--   <div class="row">
         
               <div class="col-sm-4 py-4">
                 <div class="thumbnail">

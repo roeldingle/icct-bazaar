@@ -23,6 +23,7 @@
             <?php echo $category['name']; ?>
             <img src="<?php echo $category['image_url'] ?>" alt="<?php echo $category['name']; ?>">
             
+            
           </div>
           <?php } ?>
           <!--end loop category-->

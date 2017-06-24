@@ -24,14 +24,14 @@
         <div class="row">
           <div class="col-sm-8 py-4">
             <h4 class="text-white">About</h4>
-            <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel bibendum dolor, vel fringilla erat. Nunc accumsan sem sit amet tempor fringilla. Sed eu interdum mauris. Praesent sed blandit odio, in ultrices dolor. Nam pretium tortor ipsum, sit amet gravida mauris consectetur eget. Nunc eu malesuada mi, eget sollicitudin urna. Donec suscipit malesuada ullamcorper. Suspendisse maximus orci in purus faucibus tincidunt. Cras sed sagittis ligula.</p>
           </div>
           <div class="col-sm-4 py-4">
             <h4 class="text-white">Pages</h4>
             <ul class="list-unstyled">
               <li><a href="./" class="text-white">Home</a></li>
               <li><a href="item-list.php" class="text-white">Products</a></li>
-              <li><a href="#" class="text-white">Contact us</a></li>
+              <li><a href="#" class="text-white">Login</a></li>
             </ul>
           </div>
         </div>

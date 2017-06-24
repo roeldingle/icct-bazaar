@@ -9,3 +9,7 @@ $site_data = DB::queryFirstRow("SELECT * FROM tb_site_info");
 //get item categories
 $item_categories = DB::query("SELECT * FROM tb_item_category");
 
+//get item for sale
+$items = DB::query("SELECT * FROM tb_items");
+
+

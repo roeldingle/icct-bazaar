@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 19, 2017 at 06:04 PM
+-- Generation Time: Jun 24, 2017 at 06:38 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -43,10 +43,10 @@ CREATE TABLE `tb_items` (
 --
 
 INSERT INTO `tb_items` (`id`, `user_id`, `item_category_id`, `name`, `price`, `description`, `date_posted`, `status_id`, `image_url`) VALUES
-(1, 2, 1, 'Iphone 7', 12000, 'This is my personal phone that I love. Latest iPhone in Market.', '2017-06-18 09:44:33', 1, 'items/iphone.jpg'),
-(2, 2, 3, 'Second Hand Books', 200, 'Random second hand books for selling', '2017-06-18 11:29:20', 1, 'items/books.jpg'),
-(3, 3, 2, 'ICCT uniform', 350, 'Pre-owned uniform for ICCT BSIT students size 12', '2017-06-18 11:32:34', 1, 'items/uniform.jpg'),
-(4, 3, 4, 'Fidget Spinner', 120, 'Brand new spinner that can make you a genius.', '2017-06-16 18:30:00', 1, 'items/fidget-spinner.jpg');
+(1, 2, 1, 'Iphone 7', 12000, 'This is my personal phone that I love. Latest iPhone in Market.', '2017-06-18 09:44:33', 1, 'admin/uploads/items/iphone.jpg'),
+(2, 2, 3, 'Second Hand Books', 200, 'Random second hand books for selling', '2017-06-18 11:29:20', 1, 'admin/uploads/items/books.jpg'),
+(3, 3, 2, 'ICCT uniform', 350, 'Pre-owned uniform for ICCT BSIT students size 12', '2017-06-18 11:32:34', 1, 'admin/uploads/items/uniform.jpg'),
+(4, 3, 4, 'Fidget Spinner', 120, 'Brand new spinner that can make you a genius.', '2017-06-16 18:30:00', 1, 'admin/uploads/items/fidget-spinner.jpg');
 
 -- --------------------------------------------------------
 

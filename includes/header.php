@@ -1,4 +1,17 @@
-<?php include('includes/database.php'); ?>
+<?php
+session_start();
+
+include('lib/meekrodb.2.3.class.php');
+
+//get site info from database
+$site_data = DB::queryFirstRow("SELECT * FROM tb_site_info");
+
+//get item categories
+$item_categories = DB::query("SELECT * FROM tb_item_category"); 
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,26 +35,53 @@
   <div class="collapse bg-inverse" id="navbarHeader">
       <div class="container">
         <div class="row">
-          <div class="col-sm-8 py-4">
+
+          <div class="col-sm-4 py-4">
             <h4 class="text-white">About</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel bibendum dolor, vel fringilla erat. Nunc accumsan sem sit amet tempor fringilla. Sed eu interdum mauris. Praesent sed blandit odio, in ultrices dolor. Nam pretium tortor ipsum, sit amet gravida mauris consectetur eget. Nunc eu malesuada mi, eget sollicitudin urna. Donec suscipit malesuada ullamcorper. Suspendisse maximus orci in purus faucibus tincidunt. Cras sed sagittis ligula.</p>
+            <p class="text-muted">An ECommerce Website Design to help the Students of ICCT Binangonan Campus</p>
           </div>
           <div class="col-sm-4 py-4">
-            <h4 class="text-white">Pages</h4>
+            <h4 class="text-white">Categories</h4>
             <ul class="list-unstyled">
-              <li><a href="./" class="text-white">Home</a></li>
-              <li><a href="item-list.php" class="text-white">Products</a></li>
-              <li><a href="#" class="text-white">Login</a></li>
+
+              <!--loop category-->
+              <?php foreach($item_categories as $key=>$category){ ?>
+              <li><a href="category.php?name=<?php echo $category['name']; ?>" class="text-white"><?php echo $category['label']; ?></a></li>
+              <?php } ?>
+              <!--end loop category-->
             </ul>
           </div>
+
+          <div class="col-sm-4 py-4">
+            <h4 class="text-white">Sign-in your account</h4>
+            <form name="login" class="login-form">
+            <input type="text" name="email" placeholder="Email">
+            <input type="password" name="pass" placeholder="Password"><br />
+            <span class="text-white">Not yet a member? </span><a href="register.php" >Register</a>
+            <input type="submit" name="login" class="btn btn-sm btn-primary"  style="float:right;margin-right:10%" value="Login">
+            
+            </form>
+            
+          </div>
+
         </div>
       </div>
     </div>
     <div class="navbar navbar-inverse bg-inverse">
       <div class="container d-flex justify-content-between">
-        <a href="#" class="navbar-brand"><?php echo $site_data['title']; ?></a>
+        <a href="/icct-bazaar" class="navbar-brand"><?php echo $site_data['title']; ?></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-12 py-4" style="text-align:right">
+              Welcome back Jaymie, 
+              <a href="">Logout?</a>
+          </div>
+        </div>
     </div>

@@ -20,9 +20,10 @@
           <!--loop category-->
           <?php foreach($item_categories as $key=>$category){ ?>
           <div class="card text-center">
-            <?php echo $category['name']; ?>
-            <img src="<?php echo $category['image_url'] ?>" alt="<?php echo $category['name']; ?>">
-            
+            <?php echo $category['label']; ?>
+            <a href="category.php?name=<?php echo $category['name'] ?>">
+              <img src="<?php echo $category['image_url'] ?>" alt="<?php echo $category['label']; ?>">
+            </a>
             
           </div>
           <?php } ?>

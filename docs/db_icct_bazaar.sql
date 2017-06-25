@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 24, 2017 at 06:38 AM
--- Server version: 10.1.21-MariaDB
--- PHP Version: 5.6.30
+-- Generation Time: Jun 25, 2017 at 10:07 AM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -30,7 +30,8 @@ CREATE TABLE `tb_items` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `item_category_id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
+  `label` varchar(100) NOT NULL,
+  `name` varchar(60) NOT NULL,
   `price` double NOT NULL,
   `description` text NOT NULL,
   `date_posted` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -42,11 +43,11 @@ CREATE TABLE `tb_items` (
 -- Dumping data for table `tb_items`
 --
 
-INSERT INTO `tb_items` (`id`, `user_id`, `item_category_id`, `name`, `price`, `description`, `date_posted`, `status_id`, `image_url`) VALUES
-(1, 2, 1, 'Iphone 7', 12000, 'This is my personal phone that I love. Latest iPhone in Market.', '2017-06-18 09:44:33', 1, 'admin/uploads/items/iphone.jpg'),
-(2, 2, 3, 'Second Hand Books', 200, 'Random second hand books for selling', '2017-06-18 11:29:20', 1, 'admin/uploads/items/books.jpg'),
-(3, 3, 2, 'ICCT uniform', 350, 'Pre-owned uniform for ICCT BSIT students size 12', '2017-06-18 11:32:34', 1, 'admin/uploads/items/uniform.jpg'),
-(4, 3, 4, 'Fidget Spinner', 120, 'Brand new spinner that can make you a genius.', '2017-06-16 18:30:00', 1, 'admin/uploads/items/fidget-spinner.jpg');
+INSERT INTO `tb_items` (`id`, `user_id`, `item_category_id`, `label`, `name`, `price`, `description`, `date_posted`, `status_id`, `image_url`) VALUES
+(1, 1, 1, 'Apple Iphone 7', '', 12000, 'This is my personal phone that I love. Latest iPhone in Market.', '2017-06-18 09:44:33', 1, 'admin/uploads/items/iphone.jpg'),
+(2, 2, 3, 'Second Hand Books', '', 200, 'Random second hand books for selling', '2017-06-18 11:29:20', 1, 'admin/uploads/items/books.jpg'),
+(3, 3, 2, 'ICCT uniform', '', 350, 'Pre-owned uniform for ICCT BSIT students size 12', '2017-06-18 11:32:34', 1, 'admin/uploads/items/uniform.jpg'),
+(4, 2, 4, 'Fidget Spinner', '', 120, 'Brand new spinner that can make you a genius.', '2017-06-16 18:30:00', 1, 'admin/uploads/items/fidget-spinner.jpg');
 
 -- --------------------------------------------------------
 
@@ -56,7 +57,8 @@ INSERT INTO `tb_items` (`id`, `user_id`, `item_category_id`, `name`, `price`, `d
 
 CREATE TABLE `tb_item_category` (
   `id` int(11) NOT NULL,
-  `name` varchar(50) NOT NULL,
+  `label` varchar(50) NOT NULL,
+  `name` varchar(30) NOT NULL,
   `image_url` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -64,13 +66,13 @@ CREATE TABLE `tb_item_category` (
 -- Dumping data for table `tb_item_category`
 --
 
-INSERT INTO `tb_item_category` (`id`, `name`, `image_url`) VALUES
-(1, 'Gadgets', 'images/category/gadgets.jpg\n'),
-(2, 'Clothes', 'images/category/clothes.jpg'),
-(3, 'School supplies', 'images/category/school_supplies.jpg'),
-(4, 'Accessories', 'images/category/accessories.jpg'),
-(5, 'Shoes', 'images/category/shoes.jpg'),
-(6, 'Bags', 'images/category/bags.jpg');
+INSERT INTO `tb_item_category` (`id`, `label`, `name`, `image_url`) VALUES
+(1, 'Gadgets', 'gadgets', 'images/category/gadgets.jpg\n'),
+(2, 'Clothes', 'clothes', 'images/category/clothes.jpg'),
+(3, 'School supplies', 'school-supplies', 'images/category/school_supplies.jpg'),
+(4, 'Accessories', 'accessories', 'images/category/accessories.jpg'),
+(5, 'Shoes', 'shoes', 'images/category/shoes.jpg'),
+(6, 'Bags', 'bags', 'images/category/bags.jpg');
 
 -- --------------------------------------------------------
 
@@ -124,6 +126,7 @@ CREATE TABLE `tb_users` (
   `fname` varchar(50) NOT NULL,
   `lname` varchar(50) NOT NULL,
   `contact` varchar(50) NOT NULL,
+  `image_url` text NOT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '0',
   `date_reg` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -132,10 +135,10 @@ CREATE TABLE `tb_users` (
 -- Dumping data for table `tb_users`
 --
 
-INSERT INTO `tb_users` (`id`, `user_role_id`, `email`, `password`, `fname`, `lname`, `contact`, `is_active`, `date_reg`) VALUES
-(1, 1, 'jaymiedingle@gmail.com', '123456', 'Jaymie', 'Dingle', '09106225625', 1, '2017-06-17 18:30:00'),
-(2, 2, 'dcmacaloi@gmail.com', '111111', 'Desiree', 'Macaloi', '0911111098', 1, '2017-06-17 18:30:00'),
-(3, 2, 'jaynarivera@gmail.com', '111111', 'Jayna', 'Rivera', '091211133233', 1, '2017-06-17 18:30:00');
+INSERT INTO `tb_users` (`id`, `user_role_id`, `email`, `password`, `fname`, `lname`, `contact`, `image_url`, `is_active`, `date_reg`) VALUES
+(1, 1, 'jaymiedingle@gmail.com', '123456', 'Jaymie', 'Dingle', '09106225625', 'admin/uploads/users/jaymie.jpg', 1, '2017-06-17 18:30:00'),
+(2, 2, 'dcmacaloi@gmail.com', '111111', 'Desiree', 'Macaloi', '0911111098', 'admin/uploads/users/desiree.jpg', 1, '2017-06-17 18:30:00'),
+(3, 2, 'jaynarivera@gmail.com', '111111', 'Jayna', 'Rivera', '091211133233', 'admin/uploads/users/jayna.jpg', 1, '2017-06-17 18:30:00');
 
 -- --------------------------------------------------------
 
@@ -162,7 +165,8 @@ ALTER TABLE `tb_items`
 -- Indexes for table `tb_item_category`
 --
 ALTER TABLE `tb_item_category`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `slug` (`name`);
 
 --
 -- Indexes for table `tb_item_status`

@@ -53,6 +53,14 @@ $item_categories = DB::query("SELECT * FROM tb_item_category");
           </div>
 
           <div class="col-sm-4 py-4">
+
+            <h4 class="text-white">Connect with us</h4>
+            <span class="bg-social bg-social-fb"></span>
+            <span class="bg-social bg-social-gp"></span>
+            <span class="bg-social bg-social-tw"></span>
+            <div style="height:15px"></div>
+
+            
             <h4 class="text-white">Sign-in your account</h4>
             <form name="login" class="login-form">
             <input type="text" name="email" placeholder="Email">
@@ -80,8 +88,28 @@ $item_categories = DB::query("SELECT * FROM tb_item_category");
     <div class="container">
         <div class="row">
           <div class="col-sm-12 py-4" style="text-align:right">
-              Welcome back Jaymie, 
-              <a href="">Logout?</a>
+              
+              <?php if(isset($_SESSION['user']) == false){ ?>
+              <!-- Example split danger button -->
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary">Welcome back, Jaymie</button>
+                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="profile.php">My Profile</a>
+                  <a class="dropdown-item" href="mystuff.php">My Stuff</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Logout</a>
+                </div>
+              </div>
+              <?php }else{ ?>
+
+              <a href="register.php" class="btn btn-primary pull-right" style="float: right;">Start selling my stuff</a>
+
+
+              <?php } ?>
+
           </div>
         </div>
     </div>

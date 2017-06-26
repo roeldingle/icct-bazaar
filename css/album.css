@@ -14,7 +14,7 @@ input[type=password]
 }
 
 .jumbotron {
-  padding-top: 4rem;
+  padding-top: 2rem;
   padding-bottom: 4rem;
   margin-bottom: 0;
   background-color: #fff;
@@ -179,7 +179,7 @@ footer p {
   color:#fff;
 }
 
-.seller-info a {color: #fff}
+.seller-info a {color: #fff}f
 
 .seller-info .btn{
   width:100%;
@@ -194,3 +194,23 @@ footer p {
 .hide-bullets li{
     display: inline-block;
 }
+
+.registration-form input[type=text],
+.registration-form input[type=password]
+{
+  font-size:14px;
+  padding:8px;
+}
+
+
+/******social icon sprites*****/
+
+.bg-social {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+
+.bg-social-fb{ background: url(../images/css_sprites.png) -25px -10px; }
+.bg-social-gp{ background: url(../images/css_sprites.png) -91px -78px; }
+.bg-social-tw{ background: url(../images/css_sprites.png) -91px -10px; }

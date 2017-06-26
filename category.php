@@ -19,7 +19,6 @@
         <div class="row view-header" >
           <h1 style="width:100%">
             <?php echo $category['label']; ?>
-            <a href="#" class="btn btn-info pull-right" style="float: right;">Start selling my stuff</a>
           </h1>
         </div>
         

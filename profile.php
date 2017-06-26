@@ -9,7 +9,7 @@
 
         <div class="row view-header" >
           <h1 style="width:100%">
-            Sign up
+            My Profile
           </h1>
         </div>
 
@@ -33,7 +33,6 @@
           </div>
 
 
-
           <div class="col bd-highlight p-3">
             <div class="form-group">
               <label for="fname">Contact</label>
@@ -48,13 +47,12 @@
               <input type="password" name="confirm-password" class="form-control" placeholder="Confirm Password">
             </div>
           </div>
-
-
           
         </div>
 
 
-        <input type="submit" class="btn btn-primary" name="btn-register" value="Register">
+        <input type="submit" class="btn btn-primary" name="btn-register" value="Update">
+        <a href="index.php" class="btn btn-danger pull-right" >Cancel</a>
         </form>
 
 

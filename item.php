@@ -30,7 +30,7 @@
         <div class="row view-header" >
           <h1 style="width:100%">
             <?php echo $item['tb_item_category.label'];?>
-            <a href="#" class="btn btn-primary pull-right" style="float: right;">Start selling my stuff</a>
+            
           </h1>
         </div>
         

@@ -3,15 +3,17 @@
   margin-bottom: 0;
 }
 
-.login-form {
-  font-size: 12px;
+.navbar-brand{
+      width: 60%;
 }
-input[type=text],
-input[type=password]
-{
-    padding: 2px;
-    margin-bottom:4px;
+
+.error-wrap{
+  color:red;
+  font-size:12px;
+  margin-bottom:4px;
 }
+
+
 
 .jumbotron {
   padding-top: 2rem;
@@ -173,16 +175,15 @@ footer p {
 
 .seller-info{
   margin-top:10%;
-  padding:20px 10px 10px;
+  padding:20px 10px;
   background:#0275d8;
   text-align:center;
   color:#fff;
 }
 
-.seller-info a {color: #fff}f
-
-.seller-info .btn{
-  width:100%;
+.seller-info a{
+  color: #fff;
+  width:90%;
   margin-bottom:5px;
 }
 
@@ -195,8 +196,9 @@ footer p {
     display: inline-block;
 }
 
-.registration-form input[type=text],
-.registration-form input[type=password]
+input[type=text],
+input[type=password],
+select
 {
   font-size:14px;
   padding:8px;
@@ -214,3 +216,66 @@ footer p {
 .bg-social-fb{ background: url(../images/css_sprites.png) -25px -10px; }
 .bg-social-gp{ background: url(../images/css_sprites.png) -91px -78px; }
 .bg-social-tw{ background: url(../images/css_sprites.png) -91px -10px; }
+
+/*login form*/
+#login-form {
+  font-size: 12px;
+}
+#login-form input[type=text],
+#login-form input[type=password]
+/*.login-form  select*/
+{
+    padding: 2px;
+    margin-bottom:4px;
+    width:90%;
+}
+
+#welcome-nav a{
+  font-size: 14px;
+  color:#292b2c;
+}
+
+#welcome-nav img{
+  width: 50px;
+  height: 50px;
+}
+
+.user-main-info-wrap span.divider{
+    display: inline-block;
+    width: 0;
+    height: 10px;
+    border-left: 1px solid #cacaca;
+    border-right: 1px solid #cacaca;
+    margin: auto 10px;
+}
+
+.form-thumbnail{
+  height: 350px; 
+  width:80%;
+  margin-bottom: 10px;
+}
+
+.profile-maininfo-wrap{
+  text-align: center;
+  padding:1em 0;
+}
+
+
+/** admin **/
+.admin-side-category-container{
+
+}
+
+.admin-side-category-container li{
+  padding:10px 5px;
+  border-bottom:1px solid #cacaca;
+}
+
+.admin-side-category-container li a{
+  display:block;
+}
+
+.admin-side-category-container li:hover{
+  background:#cacaca;
+  color:#fff;
+}

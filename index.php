@@ -1,13 +1,20 @@
-<?php include('includes/header.php'); ?>
+<?php 
+include('includes/header.php'); 
+?>
 
-    
+    <style type="text/css">
+      .cta-pusher{display:none;}
+      .jumbotron{
+        margin-top:2em;
+      }
+    </style>
 
     <section class="jumbotron text-center">
       <div class="container">
         <h1 class="jumbotron-heading">Search, Transact and Deal</h1>
         <p class="lead text-muted"><?php echo $site_data['tagline']; ?></p>
         <p>
-          <a href="#" class="btn btn-lg btn-primary">Start selling my stuff</a>
+          <a href="<?php echo isset($_SESSION['userdata']) ? 'mystuff.php' : 'register.php' ; ?>" class="btn btn-lg btn-primary">Start selling your stuff</a>
         </p>
       </div>
     </section>
@@ -20,9 +27,9 @@
           <!--loop category-->
           <?php foreach($item_categories as $key=>$category){ ?>
           <div class="card text-center">
-            <?php echo $category['label']; ?>
-            <a href="category.php?name=<?php echo $category['name'] ?>">
-              <img src="<?php echo $category['image_url'] ?>" alt="<?php echo $category['label']; ?>">
+            <?php echo $category['name']; ?>
+            <a href="category.php?id=<?php echo $category['id'] ?>">
+              <img src="<?php echo $category['image_url'] ?>" alt="<?php echo $category['name']; ?>">
             </a>
             
           </div>

@@ -5,15 +5,13 @@
 
   $get_item_id = isset($_GET['id']) ?  $_GET['id'] : 'No Category set';
 
- // $item = DB::queryFirstRow("SELECT * FROM tb_items WHERE id = " .$get_item_id);
-
   $item = DB::queryFullColumns("SELECT * FROM tb_items 
            LEFT JOIN tb_users 
            ON tb_items.user_id = tb_users.id 
            LEFT JOIN tb_item_category 
            ON tb_items.item_category_id = tb_item_category.id 
            LEFT JOIN tb_item_status
-           ON tb_items.status_id = tb_item_status.id 
+           ON tb_items.item_status_id = tb_item_status.id 
            WHERE tb_items.id = %i ", $get_item_id );
 
 
@@ -28,10 +26,11 @@
       <div class="container">
 
         <div class="row view-header" >
-          <h1 style="width:100%">
-            <?php echo $item['tb_item_category.label'];?>
-            
-          </h1>
+          <div class="col-sm-12">
+            <h1>
+              <?php echo $item['tb_item_category.name'];?>
+            </h1>
+          </div>
         </div>
         
         <div class="row">
@@ -82,7 +81,7 @@
 
 
                   <div class="row">
-                      <h2 style="display:block"><?php echo $item['tb_items.label'];?></h2>
+                      <h2 style="display:block"><?php echo $item['tb_items.name'];?></h2>
                   </div>
 
                   <div class="row">
@@ -129,7 +128,7 @@
 
                     <div class="row seller-info">
                       <div class="small-12 xlarge-10 columns">
-                          <h4>Seller Information</h4>
+                          <h4>Owner Information</h4>
                           <span class="user-main-info-wrap">
                             <img class="img-circle user-avatar" src="<?php echo $item['tb_users.image_url']; ?>" />
                             <a href="" style="width:100%"><?php echo $item['tb_users.fname'] . " " . $item['tb_users.lname'];?></a>
@@ -137,7 +136,7 @@
                           
 
                           <a href="#" class="btn btn-success">Message Seller <span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a>
-                          <a href="#" class="btn btn-info">#<?php echo $item['tb_users.contact'];?></a>
+                          <a href="#" class="btn btn-info"><?php echo $item['tb_users.contact'];?></a>
                       </div>
                     </div>
                     

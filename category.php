@@ -3,9 +3,9 @@
 
 <?php
 
-  $category_slug = isset($_GET['name']) ?  $_GET['name'] : 'No Category set';
+  $get_category_id = isset($_GET['id']) ?  $_GET['id'] : 'No Category set';
 
-  $category = DB::queryFirstRow("SELECT * FROM tb_item_category WHERE name = '" .$category_slug . "'");
+  $category = DB::queryFirstRow("SELECT * FROM tb_item_category WHERE id = '" .$get_category_id . "'");
 
   $category_items = DB::query("SELECT * FROM tb_items WHERE item_category_id = " . $category['id']);
 
@@ -17,9 +17,11 @@
       
       <div class="container">
         <div class="row view-header" >
-          <h1 style="width:100%">
-            <?php echo $category['label']; ?>
-          </h1>
+          <div class="col-sm-12">
+            <h1>
+              <?php echo $category['name']; ?>
+            </h1>
+          </div>
         </div>
         
         <div class="row">

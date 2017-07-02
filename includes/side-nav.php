@@ -9,7 +9,7 @@
 
         <!--loop category-->
        <?php foreach($item_categories as $key=>$category){ ?>
-        <li><a href="#" ><?php echo $category['label']; ?></a></li>
+        <li><a href="category.php?id=<?php echo $category['id']; ?>" ><?php echo $category['name']; ?></a></li>
         <?php } ?>
         <!--end loop category-->
       </ul>
